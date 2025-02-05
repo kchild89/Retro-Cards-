@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+:root {
+    --bg-color: #0d0221;
+    --neon-pink: #ff007f;
+    --neon-blue: #00eaff;
+    --text-color: #fff;
+}
+
+body {
+    font-family: 'Press Start 2P', cursive;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background: var(--neon-pink);
+    padding: 15px;
+    box-shadow: 0 0 10px var(--neon-pink);
+}
+
+header h1 {
+    font-size: 24px;
+}
+
+nav a {
+    color: var(--text-color);
+    text-decoration: none;
+    margin: 0 15px;
+}
+
+.hero {
+    padding: 50px 20px;
+    background: linear-gradient(45deg, var(--neon-blue), var(--neon-pink));
+    box-shadow: 0 0 20px var(--neon-pink);
+}
+
+.hero h2 {
+    font-size: 28px;
+}
+
+.hero .btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: var(--neon-blue);
+    color: #000;
+    text-decoration: none;
+    box-shadow: 0 0 10px var(--neon-blue);
+    transition: 0.3s ease-in-out;
+}
+
+.hero .btn:hover {
+    box-shadow: 0 0 20px var(--neon-blue);
+    transform: scale(1.1);
+}
+
+footer {
+    margin-top: 30px;
+    padding: 10px;
+    background: var(--neon-pink);
+}
