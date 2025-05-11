@@ -7,23 +7,37 @@
     --text-color: #fff;
 }
 
+html,
 body {
-    font-family: 'Press Start 2P', cursive;
-    background-color: var(--bg-color);
-    color: var(--text-color);
-    text-align: center;
+    height: 100%;
     margin: 0;
     padding: 0;
 }
 
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Press Start 2P', cursive;
+    background: var(--bg-color);
+    color: var(--text-color);
+    text-align: center;
+}
+
+/* header/nav */
 header {
     background: var(--neon-pink);
     padding: 15px;
     box-shadow: 0 0 10px var(--neon-pink);
+    flex-shrink: 0;
 }
 
 header h1 {
     font-size: 24px;
+    margin: 0;
+}
+
+nav {
+    margin-top: 8px;
 }
 
 nav a {
@@ -32,17 +46,29 @@ nav a {
     margin: 0 15px;
 }
 
+/* main sections grow to fill */
+.hero,
+.store {
+    flex: 1;
+    padding: 40px 20px;
+}
+
+/* hero */
 .hero {
-    padding: 50px 20px;
     background: linear-gradient(45deg, var(--neon-blue), var(--neon-pink));
     box-shadow: 0 0 20px var(--neon-pink);
 }
 
 .hero h2 {
     font-size: 28px;
+    margin-bottom: 10px;
 }
 
-.hero .btn {
+.hero p {
+    margin: 0;
+}
+
+.btn {
     display: inline-block;
     margin-top: 20px;
     padding: 10px 20px;
@@ -50,16 +76,30 @@ nav a {
     color: #000;
     text-decoration: none;
     box-shadow: 0 0 10px var(--neon-blue);
-    transition: 0.3s ease-in-out;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.hero .btn:hover {
-    box-shadow: 0 0 20px var(--neon-blue);
+.btn:hover {
     transform: scale(1.1);
+    box-shadow: 0 0 20px var(--neon-blue);
 }
 
+/* store page */
+.store h2 {
+    font-size: 26px;
+    margin-bottom: 20px;
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    padding: 0 20px;
+}
+
+/* footer */
 footer {
-    margin-top: 30px;
-    padding: 10px;
     background: var(--neon-pink);
+    padding: 10px;
+    flex-shrink: 0;
 }
