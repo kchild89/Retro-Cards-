@@ -7,54 +7,40 @@
     --text-color: #fff;
 }
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 html,
 body {
     height: 100%;
     margin: 0;
     padding: 0;
-}
-
-body {
-    display: flex;
-    flex-direction: column;
     font-family: 'Press Start 2P', cursive;
     background: var(--bg-color);
     color: var(--text-color);
-    text-align: center;
 }
 
-/* header/nav */
-header {
-    background: var(--neon-pink);
-    padding: 15px;
-    box-shadow: 0 0 10px var(--neon-pink);
-    flex-shrink: 0;
+/* Layout for all pages */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
-header h1 {
-    font-size: 24px;
-    margin: 0;
-}
-
-nav {
-    margin-top: 8px;
-}
-
-nav a {
-    color: var(--text-color);
-    text-decoration: none;
-    margin: 0 15px;
-}
-
-/* main sections grow to fill */
-.hero,
-.store {
+main {
     flex: 1;
-    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
-/* hero */
+/* Hero (only on homepage) */
 .hero {
+    text-align: center;
+    padding: 60px 20px;
     background: linear-gradient(45deg, var(--neon-blue), var(--neon-pink));
     box-shadow: 0 0 20px var(--neon-pink);
 }
@@ -84,7 +70,47 @@ nav a {
     box-shadow: 0 0 20px var(--neon-blue);
 }
 
-/* store page */
+header {
+    background: var(--neon-pink);
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 0 10px var(--neon-pink);
+    flex-shrink: 0;
+}
+
+header h1 {
+    font-size: 24px;
+}
+
+nav {
+    margin-top: 8px;
+}
+
+nav a {
+    color: var(--text-color);
+    text-decoration: none;
+    margin: 0 15px;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 0;
+    padding: 20px;
+    overflow: hidden;
+}
+
+.store {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    justify-content: center;
+}
+
 .store h2 {
     font-size: 26px;
     margin-bottom: 20px;
@@ -92,26 +118,24 @@ nav a {
 
 .card-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 20px;
-    padding: 0 20px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px 40px;
+    justify-items: center;
 }
 
 .card {
+    width: 220px;
     background: #1a1a2e;
     border: 2px solid var(--neon-pink);
     border-radius: 8px;
-    padding: 10px;
+    padding: 15px;
     text-align: center;
     box-shadow: 0 0 10px var(--neon-pink);
-    transition: transform 0.2s ease;
 }
 
 .card img {
-    max-width: 100%;
+    width: 180px;
     height: auto;
-    width: 150px;
-    /* adjust size as needed */
     margin-bottom: 10px;
 }
 
@@ -139,9 +163,9 @@ nav a {
     transform: scale(1.1);
 }
 
-/* footer */
 footer {
     background: var(--neon-pink);
     padding: 10px;
+    text-align: center;
     flex-shrink: 0;
 }
