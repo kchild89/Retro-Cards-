@@ -24,6 +24,24 @@ document.addEventListener("DOMContentLoaded", () => {
       price: 20,
       img: "Images/retro-warrior.png",
     },
+    {
+      id: 4,
+      name: "Synth Ninja",
+      price: 25,
+      img: "Images/synth-ninja.png",
+    },
+    {
+      id: 5,
+      name: "Laser Valkyrie",
+      price: 30,
+      img: "Images/laser-valkyrie.png",
+    },
+    {
+      id: 6,
+      name: "Holo Golem",
+      price: 35,
+      img: "Images/holo-golem.png",
+    },
   ];
 
   function updateCartCount() {

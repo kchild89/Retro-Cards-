@@ -97,6 +97,48 @@ nav a {
     padding: 0 20px;
 }
 
+.card {
+    background: #1a1a2e;
+    border: 2px solid var(--neon-pink);
+    border-radius: 8px;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0 0 10px var(--neon-pink);
+    transition: transform 0.2s ease;
+}
+
+.card img {
+    max-width: 100%;
+    height: auto;
+    width: 150px;
+    /* adjust size as needed */
+    margin-bottom: 10px;
+}
+
+.card h3 {
+    font-size: 12px;
+    margin: 5px 0;
+}
+
+.card p {
+    font-size: 10px;
+    margin: 0 0 10px;
+}
+
+.card button {
+    font-size: 10px;
+    padding: 5px 10px;
+    background: var(--neon-blue);
+    color: black;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 0 5px var(--neon-blue);
+}
+
+.card button:hover {
+    transform: scale(1.1);
+}
+
 /* footer */
 footer {
     background: var(--neon-pink);
