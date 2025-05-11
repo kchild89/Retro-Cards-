@@ -119,12 +119,12 @@ main {
 .card-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 40px 40px;
+    gap: 80px 80px;
     justify-items: center;
 }
 
 .card {
-    width: 220px;
+    width: 500px;
     background: #1a1a2e;
     border: 2px solid var(--neon-pink);
     border-radius: 8px;
@@ -134,7 +134,7 @@ main {
 }
 
 .card img {
-    width: 180px;
+    width: 200px;
     height: auto;
     margin-bottom: 10px;
 }
